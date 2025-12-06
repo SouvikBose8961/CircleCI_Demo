@@ -20,7 +20,7 @@ jobs:
           command: |
             echo "Inside the Build and push Docker image step"
             docker --version
-            docker build -t sudkul/sample-express-app .
-            docker tag sudkul/sample-express-app sudkul/sample-express-app:1.0.0
+            docker build -t sbose5aug/sample-express-app .
+            docker tag sbose5aug/sample-express-app sbose5aug/circle_ci_test
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker push sudkul/sample-express-app:1.0.0
+            docker push sbose5aug/circle_ci_test
